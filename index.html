@@ -19,7 +19,7 @@
     </header>
     <main>
         <div id="content">
-            <article class="resume">
+            <article id="resume" class="resume">
                 <h1>Resume</h1>
                 <div class="education">
                     <h2>Education</h2>
@@ -62,38 +62,50 @@
                     </div>
                 </div>
             </article>
-            <article class="projects">
-                <h1>Projects</h1>
-                <div class="project-card">
-                    <div class="cis">
+            <aside id="about" class="about">
+                <h1>About Me</h1>
+            </aside>
+        </div>
+        <article id="projects" class="projects">
+            <h1>Projects</h1>
+            <div class="project-card">
+                <div class="cis">
+                    <div class="cis-img-container">
                         <img class="cis-img" src="images/projects/cis.png" alt="cis">
+                    </div>
+                    <div class="cis-text-container">
                         <h4>Design</h4>
                         <h2>Campus Information System</h2>
                         <p>Use Figma to build a modern and responsive UI / UX Prototype of Campus Information System for Android.</p>
                         <a href="#">Check in Figma ></a>
                     </div>
-                    <div class="artha">
+                </div>
+                <div class="artha">
+                    <div class="artha-img-container">
                         <img class="artha-img" src="images/projects/artha.png" alt="artha">
+                    </div>
+                    <div class="artha-text-container">
                         <h4>Desktop App Development</h4>
                         <h2>Artha</h2>
                         <p>Use Java with a Java Swing library to build Artha, an application for managing income, outcome, and loans.</p>
                         <a href="#">Check in GitHub ></a>
                     </div>
-                    <div class="acl">
+                </div>
+                <div class="acl">
+                    <div class="acl-img-container">
                         <img class="acl-img" src="images/projects/acl.png" alt="acl">
+                    </div>
+                    <div class="acl-text-container">
                         <h4>Mobile Development</h4>
                         <h2>Arknights Character List</h2>
                         <p>Use Kotlin with Android Studio IDE to build Arknights Character List, an application for searching information about Characters in Mobile Game Arknights.</p>
                         <a href="#">Check in GitHub ></a>
                     </div>
                 </div>
-            </article>
-        </div>
-        <aside class="about">
-            <h1>About Me</h1>
-        </aside>
+            </div>
+        </article>
     </main>
-    <footer class="contact">
+    <footer id="contact" class="contact">
         <h1>Contact Me</h1>
     </footer>
 </body>
