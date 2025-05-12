@@ -1,5 +1,6 @@
 html {
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16px;
 }
 
 body, ul, nav {
@@ -89,6 +90,7 @@ main {
 
 #content {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
 }
 
@@ -96,6 +98,7 @@ main {
 
 .resume {
     flex: 3;
+    order: 1;
     scroll-margin-top: 4rem;
 }
 
@@ -150,7 +153,6 @@ main {
 
 .skills {
     margin-top: 5rem;
-    margin-right: 5rem;
 }
 
 .skills-card {
@@ -179,6 +181,7 @@ main {
 
 aside {
     flex: 1;
+    order: 2;
 }
 
 .about {
@@ -302,13 +305,96 @@ footer {
     transform: scale(1.05);
 }
 
-.slider-btn button:focus {
-    box-shadow: rgba(46, 164, 79, .4) 0 0 0 3px;
-    outline: none;
-}
-
-
 .slider-btn button:nth-child(4) { left: 10px; }
 .slider-btn button:nth-child(5) { right: 10px; }
 
 /* Media Query */
+
+@media (max-width: 1024px) {
+    html {
+        font-size: 20px;
+    }
+    #content {
+        flex-direction: column; /* Ubah menjadi layout vertikal */
+    }
+
+    aside {
+        order: 1; /* Ubah urutan aside menjadi yang pertama */
+    }
+
+    .about img {
+        width: 30%;
+    }
+
+    .resume {
+        margin-top: 2rem;
+        order: 2; /* Resume dipindahkan ke bawah */
+    }
+
+    .skills-card {
+        flex-direction: column;
+    }
+
+    .skills-card > *:not(:last-child) {
+        margin-right: 0;
+        margin-bottom: 1rem;
+    }
+
+    .project-card > div {
+        flex-direction: column;
+    }
+
+    .project-card img {
+        width: 100%;
+    }
+
+    .project-card > div > div:nth-child(2) p {
+        margin-bottom: 4rem;
+    }
+
+    .slider-btn button {
+        margin-top: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    html {
+        font-size: 14px;
+    }
+    header {
+        display: none;
+    }
+
+    .about img {
+        width: 50%;
+    }
+
+    .edu-exp {
+        flex-direction: column;
+    }
+
+    .skills-card {
+        flex-direction: column;
+    }
+
+    .skills-card > *:not(:last-child) {
+        margin-right: 0;
+        margin-bottom: 1rem;
+    }
+
+    .project-card > div {
+        flex-direction: column;
+    }
+
+    .project-card img {
+        width: 100%;
+    }
+
+    .project-card > div > div:nth-child(2) p {
+        margin-bottom: 4rem;
+    }
+
+    .slider-btn button {
+        margin-bottom: 0.5rem;
+    }
+}
